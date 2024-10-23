@@ -1,0 +1,20 @@
+@import "./Variables.module.scss";
+
+.buttonStyle {
+  min-width: 5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-basic) !important;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  transition-delay: 200ms;
+
+  &:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-basic);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

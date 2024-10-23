@@ -1,0 +1,20 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 200 100"
+    width="200"
+    height="100"
+    style="background-color:black"
+>
+    <text
+        x="50%"
+        y="50%"
+        text-anchor="middle"
+        fill="yellow"
+        font-family="Arial"
+        font-size="42px"
+        letter-spacing="2"
+        dy=".3em"
+    >
+        SWH
+    </text>
+</svg>
