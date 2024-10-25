@@ -10,12 +10,14 @@ export interface Hero {
   gender: string;
   homeworld: number;
   films: number[];
-  starships: number[];
 }
 
 export interface HeroesResponse {
   count: number;
-  next: string | null;
-  previous: string | null;
   results: Hero[];
+}
+
+export enum TypeCardHero {
+  Short = "SHORT", // this use for Herois list
+  Full = "FULL", // this use the page Hero
 }

@@ -1,13 +1,18 @@
 import React from "react";
-import HeroList from "./components/HeroList";
-import styles from "./styles/App.module.scss";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Main from "./pages/Main";
+import HeroPage from "./pages/HeroPage";
+import FilmsPage from "./pages/FilmsPage";
 
 const App: React.FC = () => {
   return (
-    <div className={styles.appWrapper}>
-      <h1>Star Wars Heroes</h1>
-      <HeroList />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/hero/:id" element={<HeroPage />} />
+        <Route path="/hero/:id/films" element={<FilmsPage />} />
+      </Routes>
+    </Router>
   );
 };
 
