@@ -51,3 +51,27 @@
   color: var(--color-primary);
   margin-top: 20px;
 }
+
+.filmTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  width: 10px;
+  height: 10px;
+  border: solid var(--color-grey);
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(45deg);
+}
+
+.down {
+  transform: rotate(135deg);
+}

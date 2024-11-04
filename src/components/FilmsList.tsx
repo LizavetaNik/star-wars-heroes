@@ -36,8 +36,16 @@ const FilmList: React.FC<FilmListProps> = ({ filmIds }) => {
             {selectedFilmTitles.map((film) =>
               film ? (
                 <li key={film.id} className={styles.filmItem}>
-                  <div onClick={() => handleFilmClick(film.id)}>
-                    {film.title}
+                  <div
+                    onClick={() => handleFilmClick(film.id)}
+                    className={styles.filmTitle}
+                  >
+                    <span>{film.title}</span>
+                    <span
+                      className={`${styles.arrow} ${
+                        selectedFilmId === film.id ? styles.down : styles.right
+                      }`}
+                    ></span>
                   </div>
                   {selectedFilmId === film.id && (
                     <div

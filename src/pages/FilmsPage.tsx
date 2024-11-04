@@ -20,7 +20,7 @@ const FilmsPage: React.FC = () => {
           No films available for this hero.
         </p>
       )}
-      <AppLink to={`/`}>Show films</AppLink>
+      <AppLink to={`/`}>Come back</AppLink>
     </div>
   );
 };
