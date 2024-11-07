@@ -7,6 +7,7 @@ import { RootState, AppDispatch } from "../redux/store";
 import { fetchFilms } from "../redux/filmsSlice";
 import { fetchStarships } from "../redux/starshipsSlice";
 import styles from "../styles/Main.module.scss";
+
 const Main: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const { heroes, count, page, loading } = useSelector(
@@ -21,7 +22,6 @@ const Main: React.FC = () => {
   }, [dispatch, page]);
 
   useEffect(() => {
-    console.log(films.length);
     if (films.length === 0) dispatch(fetchFilms());
     if (!starships.length) dispatch(fetchStarships());
   }, [dispatch, films.length, starships.length]);
