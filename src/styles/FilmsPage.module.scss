@@ -1,0 +1,77 @@
+@import "./Variables.module.scss";
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  color: var(--color-grey);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.filmList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filmItem {
+  padding: 10px 15px;
+  background-color: var(--color-basic);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filmItem:hover {
+  background-color: var(--color-basic);
+}
+
+.starshipListWrapper {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.noFilmsMessage {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-top: 20px;
+}
+
+.filmTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  width: 10px;
+  height: 10px;
+  border: solid var(--color-grey);
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(45deg);
+}
+
+.down {
+  transform: rotate(135deg);
+}
